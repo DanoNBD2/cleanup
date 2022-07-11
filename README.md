@@ -1,12 +1,20 @@
 ###  Clean up
-After completing your demo, delete AWS CloudFormation Stack using AWS Console or AWS CLI:
+After completing your demo, delete the 2 AWS CloudFormation Stack created using AWS CDK command:
 ```
-aws cloudformation delete-stack --stack-name $STACKNAME  --region $AWSREGION
+cdk destroy VpnStack
 
 ```
-Revert back **Block Public Access for the Account** configuration.
+In order to continue with the second stack deletion, first disassociate the AWS Transit Gateway from the AWS DirectConnect Gateway:
+
+1. Go to AWS DirectConnect Gateway console 
+2. Select the AWS DXGW created and go to the *Gateway associations* tab
+3. Click on the orange button and Disassociate
+4. Once in the Gateway associations, the AWS TGW is disassociated (takes 20min aprox.) delete the last stack with the following command:
+```
+cdk destroy VpnStack
 
 ## Security
+```
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
