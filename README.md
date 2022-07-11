@@ -9,12 +9,12 @@ In order to continue with the second stack deletion, first disassociate the AWS 
 1. Go to AWS DirectConnect Gateway console 
 2. Select the AWS DXGW created and go to the *Gateway associations* tab
 3. Click on the orange button and Disassociate
-4. Once in the Gateway associations, the AWS TGW is disassociated (takes 20min aprox.) delete the last stack with the following command:
+4. Once in the Gateway associations tab, the AWS TGW is disassociated (takes 20min aprox.) delete the last stack with the following command:
 ```
 cdk destroy VpnStack
-
-## Security
 ```
+## Security
+
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
